@@ -1,0 +1,165 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\newfontfamily\headfont{Inter}[UprightFont=*-ExtraBold,BoldFont=*-ExtraBold,Extension=.otf,Path=/usr/share/fonts/opentype/inter/]
+\usepackage[a4paper,margin=2.3cm]{geometry}
+\usepackage{graphicx,booktabs,float,caption,array,longtable}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{setspace}
+\setstretch{1.05}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.75}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\titleformat{\section}{\headfont\Large}{\thesection}{0.8em}{}
+\titleformat{\subsection}{\headfont\large}{\thesubsection}{0.8em}{}
+\captionsetup{font=small,labelfont=bf}
+\urlstyle{same}
+\hypersetup{pdftitle={When Did Your Town Last See a Total Eclipse? Every Path of Totality over Britain and Ireland, AD 1000 to 2200},pdfauthor={Tristan Hotham}}
+
+\begin{document}
+\begin{center}
+{\Large\bfseries When Did Your Town Last See a Total Eclipse?\\[2pt] Every Path of Totality over Britain and Ireland, AD 1000 to 2200\par}
+\vspace{1.2em}
+{\large Tristan Hotham\par}
+\vspace{0.3em}
+{\small Independent researcher\\
+ORCID: 0000-0003-4931-9349\\
+DOI: \href{https://doi.org/10.5281/zenodo.23729635}{https://doi.org/10.5281/zenodo.23729635}\par}
+\vspace{0.8em}
+2026
+\end{center}
+
+\begin{quote}
+\small
+\begin{center}\textbf{Abstract}\end{center}
+{{PAPER_ABSTRACT}}
+
+\textbf{Keywords:} solar eclipses; total solar eclipse; Delta T; historical astronomy; eclipse paths; Britain; Ireland; towns; open data
+\end{quote}
+
+\section{Introduction}
+
+{{PAPER_INTRO}}
+
+\section{Data and methods}
+
+{{PAPER_METHODS}}
+
+\section{Results}
+
+\subsection{How many eclipses, and when}
+
+{{PAPER_R1}}
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=0.78\textwidth]{f_paths.png}
+\caption{Every path of totality that touched land in Britain, Ireland, the Isle of Man or the Channel Islands, AD 1000 to 2200, drawn with transparency so that overlaps are darker. Red outlines: paths of annularity. Gold: centre lines of six well-known eclipses. Paths are shown where the Sun was above the horizon during the central phase.}\label{fig:paths}
+\end{figure}
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=0.95\textwidth]{f_timeline.png}
+\caption{Land inside the path of totality (up) and annularity (down) for each central eclipse over the study area, AD 1000 to 2200. The shaded band marks the interval from 1724 to 1927 with no totality on land.}\label{fig:timeline}
+\end{figure}
+
+\subsection{How often a place sees totality}
+
+{{PAPER_R2}}
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=0.78\textwidth]{f_count.png}
+\caption{Number of total solar eclipses at each 0.04 by 0.06 degree land cell, AD 1000 to 2200.}\label{fig:count}
+\end{figure}
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=0.9\textwidth]{f_towns_hist.png}
+\caption{Cities and towns by the number of total eclipses they see between AD 1000 and 2200.}\label{fig:hist}
+\end{figure}
+
+\subsection{The last total eclipse before today}
+
+{{PAPER_R3}}
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=0.78\textwidth]{f_last.png}
+\caption{Century of the last total solar eclipse before 28 October 2026 at each land cell.}\label{fig:last}
+\end{figure}
+
+{{TABLE_CITIES}}
+
+\subsection{Checks against the historical record}
+
+{{PAPER_R4}}
+
+{{TABLE_VAL}}
+
+\subsection{Sensitivity to Delta T}
+
+{{PAPER_R5}}
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=0.9\textwidth]{f_deltat.png}
+\caption{Cities and towns whose verdict (total or not) changes when Delta T is shifted by up to two minutes, for eight eclipses.}\label{fig:deltat}
+\end{figure}
+
+\section{Discussion}
+
+{{PAPER_DISCUSSION}}
+
+\section{Limitations}
+
+{{PAPER_LIMITS}}
+
+\section{Conclusion}
+
+{{PAPER_CONCLUSION}}
+
+\section*{Data and code availability}
+
+The derived data (every eclipse, every place and grid cell, the paths, the validation and sensitivity tables) and the Python code are at \url{https://github.com/Tristan-Hotham/eclipse-towns} and archived with this paper at \url{https://doi.org/10.5281/zenodo.23729635}. The interactive version, with a search for any place, is at \url{https://tristan-hotham.github.io/eclipse-towns/}. Derived data are released under CC BY 4.0 and code under the MIT licence.
+
+\section*{Funding and competing interests}
+
+No funding was received for this work. The author declares no competing interests.
+
+\section*{Use of AI}
+
+I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.
+
+\appendix
+\section{Every eclipse over land in the study area}
+
+{{TABLE_ALL}}
+
+\section*{References}
+
+\begin{small}
+\setlength{\parindent}{-1.5em}\setlength{\leftskip}{1.5em}
+
+Cross, D. Astronomy Engine (software), version 2.1.19. \url{https://github.com/cosinekitty/astronomy} (MIT licence).
+
+Espenak, F. and Meeus, J. (2006) \textit{Five Millennium Canon of Solar Eclipses: $-$1999 to +3000}. NASA Technical Publication TP-2006-214141. Greenbelt, MD: NASA Goddard Space Flight Center.
+
+GeoNames (2026) cities1000. \url{https://www.geonames.org/} (CC BY 4.0).
+
+Halley, E. (1715) Observations of the late total eclipse of the Sun on the 22d of April last past. \textit{Philosophical Transactions of the Royal Society} 29, 245.
+
+Meeus, J. (1998) \textit{Astronomical Algorithms}. 2nd edn. Richmond, VA: Willmann-Bell.
+
+Morrison, L.V. and Stephenson, F.R. (2004) Historical values of the Earth's clock error $\Delta T$ and the calculation of eclipses. \textit{Journal for the History of Astronomy} 35, 327 to 336.
+
+Natural Earth (2026) 1:10m physical vectors: land. \url{https://www.naturalearthdata.com/} (public domain).
+
+Ordnance Survey (2026) OS Open Names. Open Government Licence v3.0. \url{https://www.ordnancesurvey.co.uk/products/os-open-names}
+
+Stephenson, F.R. (1997) \textit{Historical Eclipses and Earth's Rotation}. Cambridge: Cambridge University Press.
+
+Wikipedia contributors (2026) List of solar eclipses visible from the British Isles; Solar eclipse of August 2, 1133; Solar eclipse of April 8, 1652; Solar eclipse of May 3, 1715; Solar eclipse of May 22, 1724; Solar eclipse of June 29, 1927; Solar eclipse of August 11, 1999; Solar eclipse of September 23, 2090; Solar eclipse of August 21, 2017; $\Delta T$ (timekeeping). \textit{Wikipedia, The Free Encyclopedia}. \url{https://en.wikipedia.org/} (CC BY-SA 4.0), accessed 28 October 2026.
+
+Williams, S. (1996) \textit{UK Solar Eclipses from Year 1}. Clock Tower Press.
+
+\end{small}
+\end{document}
